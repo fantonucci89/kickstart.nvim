@@ -169,8 +169,15 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 
 -- Neotree keymaps
 vim.keymap.set('n', '<C-p>', '<cmd>Neotree reveal=true toggle=true position=left<CR>', { desc = 'Toggle [N]eotree' })
+-- LazyGit keymap 
 vim.keymap.set('n', '<leader>g', '<cmd>LazyGit<CR>', { desc = '[G]it' })
-
+-- New tab keymap
+vim.keymap.set('n', '<leader>te', ':tabedit ', { desc = 'New [T]ab' })
+vim.keymap.set('n', '<tab>', '<cmd>tabnext<Return>')
+vim.keymap.set('n', '<s-tab>', '<cmd>tabprev<Return>')
+-- Split screen
+vim.keymap.set('n', 'sv', '<cmd>vsplit<CR>')
+vim.keymap.set('n', 'ss', '<cmd>split<CR>')
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
 -- is not what someone will guess without a bit more experience.
