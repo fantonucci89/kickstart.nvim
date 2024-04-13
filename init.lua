@@ -169,7 +169,7 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 
 -- Neotree keymaps
 vim.keymap.set('n', '<C-p>', '<cmd>Neotree reveal=true toggle=true position=left<CR>', { desc = 'Toggle [N]eotree' })
--- LazyGit keymap 
+-- LazyGit keymap
 vim.keymap.set('n', '<leader>g', '<cmd>LazyGit<CR>', { desc = '[G]it' })
 -- New tab keymap
 vim.keymap.set('n', '<leader>te', ':tabedit ', { desc = 'New [T]ab' })
@@ -290,7 +290,30 @@ require('lazy').setup({
       { '<leader>lg', '<cmd>LazyGit<cr>', desc = 'LazyGit' },
     },
   },
-
+  {
+    'akinsho/flutter-tools.nvim',
+    lazy = false,
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+      'stevearc/dressing.nvim', -- optional for vim.ui.select
+    },
+    config = true,
+  },
+  {
+    'christoomey/vim-tmux-navigator',
+    cmd = {
+      'TmuxNavigateLeft',
+      'TmuxNavigateDown',
+      'TmuxNavigateUp',
+      'TmuxNavigateRight',
+    },
+    keys = {
+      { '<C-h>', '<cmd>TmuxNavigateLeft<cr>', desc = 'Navigate Left' },
+      { '<C-j>', '<cmd>TmuxNavigateDown<cr>', desc = 'Navigate Down' },
+      { '<C-k>', '<cmd>TmuxNavigateUp<cr>', desc = 'Navigate Up' },
+      { '<C-l>', '<cmd>TmuxNavigateRight<cr>', desc = 'Navigate Right' },
+    },
+  },
   -- Here is a more advanced example where we pass configuration
   -- options to `gitsigns.nvim`. This is equivalent to the following Lua:
   --    require('gitsigns').setup({ ... })
