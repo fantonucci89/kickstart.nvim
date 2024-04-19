@@ -410,17 +410,6 @@ require('lazy').setup({
       end, { desc = '[S]earch [N]eovim files' })
     end,
   },
-  {
-    'akinsho/flutter-tools.nvim',
-    lazy = false,
-    dependencies = {
-      'nvim-lua/plenary.nvim',
-      'stevearc/dressing.nvim', -- optional for vim.ui.select
-    },
-    config = function()
-      require('flutter-tools').setup {}
-    end,
-  },
 
   { -- LSP Configuration & Plugins
     'neovim/nvim-lspconfig',
