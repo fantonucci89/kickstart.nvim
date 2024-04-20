@@ -10,6 +10,6 @@ return {
   config = function()
     require('neo-tree').setup()
 
-    vim.keymap.set('n', '<C-p>', '<cmd>Neotree reveal=true toggle=true position=left<CR>', { desc = 'Toggle [N]eotree' })
+    vim.keymap.set('n', '<C-p>', '<cmd>Neotree reveal=true toggle=true position=right<CR>', { desc = 'Toggle [N]eotree' })
   end,
 }

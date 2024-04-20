@@ -167,8 +167,6 @@ vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next [D]iagn
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Show diagnostic [E]rror messages' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
--- LazyGit keymap
-vim.keymap.set('n', '<leader>g', '<cmd>LazyGit<CR>', { desc = '[G]it' })
 -- New tab keymap
 vim.keymap.set('n', '<leader>te', ':tabedit ', { desc = 'New [T]ab' })
 vim.keymap.set('n', '<tab>', '<cmd>tabnext<Return>')
@@ -569,7 +567,6 @@ require('lazy').setup({
         --
         -- But for many setups, the LSP (`tsserver`) will work just fine
         -- tsserver = {},
-        --
 
         lua_ls = {
           -- cmd = {...},
