@@ -293,6 +293,9 @@ require('lazy').setup({
         ['<leader>r'] = { name = '[R]ename', _ = 'which_key_ignore' },
         ['<leader>s'] = { name = '[S]earch', _ = 'which_key_ignore' },
         ['<leader>w'] = { name = '[W]orkspace', _ = 'which_key_ignore' },
+        ['<leader>a'] = { name = 'Copilot', _ = 'which_key_ignore' },
+        ['<leader>t'] = { name = '[T]abs', _ = 'which_key_ignore' },
+        ['<leader>l'] = { name = '[L]azy Git', _ = 'which_key_ignore' },
       }
     end,
   },
@@ -609,7 +612,7 @@ require('lazy').setup({
     lazy = false,
     keys = {
       {
-        '<leader>f',
+        '<leader>F',
         function()
           require('conform').format { async = true, lsp_fallback = true }
         end,
