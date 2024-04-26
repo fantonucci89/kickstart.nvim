@@ -296,6 +296,7 @@ require('lazy').setup({
         ['<leader>a'] = { name = 'Copilot', _ = 'which_key_ignore' },
         ['<leader>t'] = { name = '[T]abs', _ = 'which_key_ignore' },
         ['<leader>l'] = { name = '[L]azy Git', _ = 'which_key_ignore' },
+        ['<leader>b'] = { name = 'De[b]ug', _ = 'which_key_ignore' },
       }
     end,
   },
